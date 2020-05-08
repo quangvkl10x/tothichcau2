@@ -16,7 +16,7 @@ html{
 	z-index: 100;
 }
 div p{
-	background: linear-gradient(to left,#55FF02,#EEB8FA);
+	background: linear-gradient(to left,#FB414A,#B8F0FA);
 	-webkit-background-clip:text;
 	-webkit-text-fill-color: transparent;
 	display: inline;
@@ -149,6 +149,9 @@ button{
 	}
 h1{
 	font-size: 25px;
+}
+div p{
+	font-size: 22px;
 }
 #modal{
 	margin-left: 25%;
