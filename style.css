@@ -14,7 +14,13 @@ html{
 	text-align: center;
 	color: #49E7F1;
 	z-index: 100;
-	
+}
+div p{
+	background: linear-gradient(to left,#55FF02,#EEB8FA);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color: transparent;
+	display: inline;
+	font-size: 30px;
 }
 h1{
 	
@@ -81,7 +87,7 @@ h1 span{
 	border-radius: 20px;
 	transition: 0.5s;
 }
-#modal>span{
+#modal>span,#modalno>span{
 	position: absolute;
 	text-align: right;
 	color:#38AACF;
@@ -91,21 +97,13 @@ h1 span{
 }
 #modal>span{
 	cursor: pointer;
-}
-#modalno>span{
-	position: absolute;
-	text-align: right;
-	color:#38AACF;
-	right: 15px;
-	top:0;
-	text-decoration: underline;
 }
 #modalno>span{
 	cursor: pointer;
 }
 button{
 	font-family: 'Lobster', cursive;
-	margin-top: 150px;
+	margin-top: 200px;
 	margin-right: 50px;
 	margin-left: 50px;
 	position: absolute;
