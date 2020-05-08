@@ -10,6 +10,8 @@ function cancel(str) {
 	pos.style.top=x3+"px";
 	pos.style.bottom=x4+"px";
 	count++;
+	if (count>9)
+		nice('modalno');
 }
 function nice(str){
 	let pos = document.getElementById(str);
@@ -32,6 +34,8 @@ function nice(str){
 function fix(str){
 	let pos = document.getElementById(str);
 	pos.style.visibility="hidden";
+	pos.style.width="0px";
+	pos.style.height="0px";
 	let bg = document.getElementById('body');
 	bg.classList.remove('invi');
 	let x = document.getElementById('no');
