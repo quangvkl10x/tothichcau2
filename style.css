@@ -1,7 +1,6 @@
 *{
 	margin:0px;
 	padding:0px;
-	font-family: 'Josefin Sans', sans-serif;
 }
 html{
 	height: 100%;
@@ -13,17 +12,44 @@ html{
 	height: 100px;
 	font-size: 50px;
 	text-align: center;
-	color: #ff5200;
+	color: #49E7F1;
 	z-index: 100;
+	
 }
-#yes,#no{
+h1{
+	
+	margin-top: 20px;
+	font-size: 50px;
+	-webkit-box-reflect: below 0px linear-gradient(transparent,rgb(0,0,0,0.4));
+}
+h1 span{
+	display: inline-block;
+	position: relative;
+	animation: animate 1.5s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate{
+	0%{
+		transform:  translateY(0px);
+	}
+	20%{
+		transform:  translateY(-20px);
+	}
+	40%,100%{
+		transform:  translateY(0px);
+	}	
+}
+#yes{
 	transition:0.5s;
+}
+#no{
+	transition:0.2s;
 }
 #body{
 	z-index: 0;
 	width: 100%;
 	height: 100%;
-	filter: blur(2px);
+	filter: blur(4px);
 	background-image: url("b.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -37,7 +63,8 @@ html{
 .nodisplay{
 	opacity: 0;
 }
-#modal {
+#modal,#modalno {
+	font-family: 'Lobster', cursive;
 	position:absolute;
 	margin-left: 40%;
 	margin-top: 100px;
@@ -60,13 +87,29 @@ html{
 	color:#38AACF;
 	right: 15px;
 	top:0;
+	text-decoration: underline;
+}
+#modal>span{
+	cursor: pointer;
+}
+#modalno>span{
+	position: absolute;
+	text-align: right;
+	color:#38AACF;
+	right: 15px;
+	top:0;
+	text-decoration: underline;
+}
+#modalno>span{
+	cursor: pointer;
 }
 button{
+	font-family: 'Lobster', cursive;
 	margin-top: 150px;
 	margin-right: 50px;
 	margin-left: 50px;
 	position: absolute;
-	width: 200px;
+	width: 300px;
 	height: 250px;
 	padding: 20px;
 	text-decoration: none;
@@ -74,7 +117,7 @@ button{
 	overflow: hidden;
 	color: #FF76A5;
 	transition: 0.2s;
-	border-radius: 30px;
+	border-radius: 15px;
 	background-color: #f1e3cb;
 	font-size: 30px;	
 	border: 0px;
@@ -83,13 +126,17 @@ button:hover{
 	color:#fff;
 	box-shadow: 0px 0px 10px #FF76A5, 0px 0px 40px #FF76A5, 0px 0px 80px #FF76A5;
 	background-color: #FF76A5;
+	cursor:pointer;
 }
 @media only screen and (max-width: 600px){
 #body{
 	background-image: url("b1.jpg");
 	}
 button{
+	font-family: 'Lobster', cursive;
 	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 200px;
 	width: 100px;
 	height: 120px;
 	padding: 20px;
@@ -98,13 +145,18 @@ button{
 	overflow: hidden;
 	color: #FF76A5;
 	transition: 0.2s;
-	margin-top: 150px;
 	background-color: #f1e3cb;
 	font-size: 15px;	
 	border: 0px;
-	margin-right: 20px;
 	}
+h1{
+	font-size: 25px;
+}
 #modal{
+	margin-left: 25%;
+	margin-top: 220px;
+	}
+#modalno{
 	margin-left: 25%;
 	margin-top: 220px;
 	}
